@@ -6,6 +6,6 @@ const postSchema = mongoose.Schema({
     category: String,
 });
 
-const PostMessage = mongoose.model('PostMessage', postSchema)
+const PostQuestion = mongoose.model('PostQuestion', postSchema)
 
-export default PostMessage;
+export default PostQuestion;
