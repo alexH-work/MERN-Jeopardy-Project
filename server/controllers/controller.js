@@ -8,14 +8,11 @@ export const getQuestion = (req,res)=> {
                   console.log(err);
                 } else {
                   res.json(result);
-                }
-              }
+            }   }
         );
-
     } catch (error) {
         res.status(404).json({message: error.message});
-    }
-}
+}   }
 
 export const createQuestion = (req,res)=> {
     const data =req;    
@@ -26,7 +23,4 @@ export const createQuestion = (req,res)=> {
         res.status(201).json(newPostQuestion);
     } catch (error) {
         res.status(409).json({message: error.message});
-    }
-
-    res.send(`${newPostQuestion} added to database`)
-}
+}   }
