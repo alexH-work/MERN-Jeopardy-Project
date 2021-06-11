@@ -14,3 +14,26 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.startBtn{
+  color: white;
+  background-color: black;
+  height: 150px;
+  width: 300px;
+  border: white solid;
+  border-radius: 15px;
+  font-size: x-large;
+  text-shadow: .75px .5px 14px aliceblue ;
+  box-shadow: 5px 5px 24px;
+  position: absolute;
+  top:70%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-weight:bold;
+  transition: ease .55s;
+}
+.startBtn:hover{
+  background-color: rgba(0, 0, 0, 0.541);
+  text-shadow: .75px .5px 14px rgb(197, 205, 211) ;
+  transition: ease .55s;
+}

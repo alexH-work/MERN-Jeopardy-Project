@@ -1,0 +1,23 @@
+.Start{
+    background-color: grey;
+}
+
+.headline{
+    font-size: 10rem;
+    color: rgba(255, 255, 255);
+    text-shadow: .5px .5px 99px rgba(240, 248, 255) ;
+}
+.card{
+    background-color: rgba(0, 0, 0, .44);
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%,-30%);
+}
+.cardText{
+    color:white;
+    padding:25px;
+    margin: 15px;;
+}
