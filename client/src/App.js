@@ -28,11 +28,15 @@ function App() {
       } );
     });
   
-  
+  const resetPoints = () => {
+    Axios.patch('https://api.com/v1/resource/{id}', 
+	{ points: '0'});
+  }
   
   const changePage = () => {
     setPage(<Game questionData={questionData}/>);
     setDisplayStartBtn(false);
+    resetPoints();
   }
   return (
     <div className="App">
