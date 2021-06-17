@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Question from './Question/question';
+import Question from './Question/questiontest.js';
 import './tile.css'
 
 const Tile = (props) => {
@@ -14,6 +14,10 @@ const Tile = (props) => {
 
     const handleShow = () => {setShow(true)
         changeColor()}
+
+    const handleCallback = (data) =>{
+            props.triggered(data);
+    }   
 //<Question view={show}/>
     return(
         <Container >
@@ -25,7 +29,7 @@ const Tile = (props) => {
             {
                 show
                 &&
-                <Question storage={props.storage} view={true}/>
+                <Question storage={props.storage} playerAmount={props.playerAmount} triggered={handleCallback} pointValue={props.point} view={true}/>
             }
         </Container>   
     );    

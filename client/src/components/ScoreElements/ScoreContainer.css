@@ -1,0 +1,18 @@
+:root{
+    --clr--black: rgba(92, 89, 89, 0.607);
+}
+.scorebox{
+    background-color: var(--clr--black);
+    box-shadow: 5px 3px 3px var(--clr--black);
+    color: white;
+    width: 1172px;
+    height: 200px;
+    position: sticky;
+    top:100%;
+    left:80%;
+    transform: translate(-0%,0%);
+    z-index: inherit;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,12 @@
+.score{
+    width: 300px;
+    height: 120px;
+    color:black;
+    margin:10px;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    top:30%;
+    left:12%;
+    transform: translate(-50%,-50%);
+}

@@ -1,13 +1,18 @@
 import './App.css';
-import React from "react";
+import React, {useState} from "react";
 import Axios from "axios";
 import Game from './components/game.js';
 import Start from '../src/components/Start/start';
 
+const resetPoints = () => {
+  Axios.patch('http://localhost:3000/api/points', 
+{ points: '0'});
+}
+
 function App() {
-  const [page,setPage] = React.useState(<Start/>);
-  const [displayStartBtn, setDisplayStartBtn] = React.useState(true);
-  const[questionData, setQuestionData] = React.useState([["0"],["1"],["2"],["3"],["4"],["5"]])
+  const [page, setPage] = useState(<Start/>);
+  const [displayStartBtn, setDisplayStartBtn] = useState(true);
+  const[questionData, setQuestionData] = useState([["0"],["1"],["2"],["3"],["4"],["5"]])
 
   window.addEventListener("DOMContentLoaded", () =>{
     var qData =  [["0"],["1"],["2"],["3"],["4"],["5"]];
@@ -27,21 +32,27 @@ function App() {
           alert('Error');
       } );
     });
-  
-  const resetPoints = () => {
-    Axios.patch('https://api.com/v1/resource/{id}', 
-	{ points: '0'});
-  }
-  
-  const changePage = () => {
-    setPage(<Game questionData={questionData}/>);
+
+  const player1 = () => {changePage(1)}
+  const player2 = () => {changePage(2)}
+  const player3 = () => {changePage(3)}
+  const player4 = () => {changePage(4)}
+
+  const changePage = (players) => {
     setDisplayStartBtn(false);
     resetPoints();
+    setPage(<Game questionData={questionData} playerAmount ={players}/>);
   }
+  
   return (
     <div className="App">
     
-    {displayStartBtn && <button className="startBtn" onClick={changePage}>Start the Game</button>}
+      {displayStartBtn && <div className="buttonContainer">
+        <button className="startBtn" onClick={player1}>1 Player</button> 
+        <button className="startBtn" onClick={player2}>2 Players</button>
+        <button className="startBtn" onClick={player3}>3 Players </button>
+        <button className="startBtn" onClick={player4}>4 Players</button>
+      </div>}
       {page}
     </div>
   );

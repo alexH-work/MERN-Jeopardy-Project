@@ -14,23 +14,28 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.buttonContainer{
+  position: absolute;
+  top:70%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: inline-flexbox;
+  width: 100%;
+}
 .startBtn{
   color: white;
   background-color: black;
-  height: 150px;
-  width: 300px;
+  height: 100px;
+  width: 215px;
   border: white solid;
   border-radius: 15px;
   font-size: x-large;
   text-shadow: .75px .5px 14px aliceblue ;
   box-shadow: 5px 5px 24px;
-  position: absolute;
-  top:70%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  position: relative;
   font-weight:bold;
   transition: ease .55s;
+  margin: 5px;
 }
 .startBtn:hover{
   background-color: rgba(0, 0, 0, 0.541);
