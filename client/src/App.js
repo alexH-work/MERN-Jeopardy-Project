@@ -43,6 +43,11 @@ function App() {
     resetPoints();
     setPage(<Game questionData={questionData} playerAmount ={players}/>);
   }
+  const reset = () => {
+    setDisplayStartBtn(true);
+    resetPoints();
+    setPage(<Start/>);
+  }
   
   return (
     <div className="App">
@@ -54,6 +59,7 @@ function App() {
         <button className="startBtn" onClick={player4}>4 Players</button>
       </div>}
       {page}
+      <button className="restartBtn" onClick={reset}>Restart Game</button>
     </div>
   );
 }

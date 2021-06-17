@@ -71,7 +71,7 @@ const Game = (props) => {
                     </tr>
                 </tbody>
                 </Table> 
-                <ScoreContainer refresh={refresh} /> 
+                <ScoreContainer refresh={refresh} playerAmount ={props.playerAmount} /> 
             </Container>  
             
         </>      

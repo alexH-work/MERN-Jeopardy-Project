@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Question from './Question/questiontest.js';
+import Question from './Question/question.js';
 import './tile.css'
 
 const Tile = (props) => {

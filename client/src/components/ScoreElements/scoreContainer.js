@@ -30,9 +30,9 @@ const ScoreContainer = (props) => {
     return(
         <div className="scorebox">
             <ScoreCard color={"cyan"} refresh={props.refresh} score={points1}/>
-            <ScoreCard color={"red"} refresh={props.refresh} score={points2}/>
-            <ScoreCard color={"pink"} refresh={props.refresh} score={points3}/>
-            <ScoreCard color={"green"} refresh={props.refresh} score={points4}/>
+            { (props.playerAmount > 1) && <ScoreCard color={"red"} refresh={props.refresh} score={points2}/> }
+            { (props.playerAmount > 2) && <ScoreCard color={"pink"} refresh={props.refresh} score={points3}/> }
+            { (props.playerAmount > 3) && <ScoreCard color={"green"} refresh={props.refresh} score={points4}/> }
         </div>
     );    
 }
