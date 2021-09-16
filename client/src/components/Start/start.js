@@ -5,7 +5,7 @@ import React from "react";
 function Start() {
   
   return (
-    <div className="Start">
+    <div id="container" className="Start">
         <div className="card">
             <h1 className="headline">Jeopardy</h1>
             <h4 className="cardText">Test your knowledge on some computer sciene topics.

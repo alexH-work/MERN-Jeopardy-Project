@@ -51,15 +51,17 @@ function App() {
   
   return (
     <div className="App">
-    
-      {displayStartBtn && <div className="buttonContainer">
-        <button className="startBtn" onClick={player1}>1 Player</button> 
-        <button className="startBtn" onClick={player2}>2 Players</button>
-        <button className="startBtn" onClick={player3}>3 Players </button>
-        <button className="startBtn" onClick={player4}>4 Players</button>
-      </div>}
-      {page}
       <button className="restartBtn" onClick={reset}>Restart Game</button>
+      <div className="Changed-features">
+        {page}
+
+        {displayStartBtn && <div className="buttonContainer">
+          <button className="startBtn" onClick={player1}>1 Player</button> 
+          <button className="startBtn" onClick={player2}>2 Players</button>
+          <button className="startBtn" onClick={player3}>3 Players </button>
+          <button className="startBtn" onClick={player4}>4 Players</button>
+        </div>}  
+      </div>
     </div>
   );
 }
