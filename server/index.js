@@ -17,7 +17,7 @@ app.get('/', (req,res) =>{res.send("Working")});
 app.use('/api', questionRoutes);
 
 
-mongoose.connect(CONNECTION_URL, {
+mongoose.connect(process.env.MONGODB_URI || CONNECTION_URL, {
    useNewUrlParser: true, useUnifiedTopology: true
 })
 .then(() => {  
