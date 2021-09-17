@@ -20,7 +20,7 @@ const Game = (props) => {
                 <Table  bordered variant="dark">
                 <thead>
                     <tr>
-                    <th>Category</th>
+                    <th>STACKS</th>
                     <th>Time Complexity</th>
                     <th>Time Complexity V2</th>
                     <th>Time Complexity algorithms</th>
