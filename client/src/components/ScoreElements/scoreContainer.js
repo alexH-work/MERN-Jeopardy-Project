@@ -10,7 +10,7 @@ const ScoreContainer = (props) => {
     const [points4, setPoints4] = React.useState(0);
    
     const  getPoints = () => {// call all point data 
-         Axios.get(`http://localhost:3000/api/points/`).then(
+         Axios.get(`https://alexs-jeopardy.herokuapp.com/api/points/`).then(
             (response) =>{           
             setPoints1(response.data[0].points);
             setPoints2(response.data[1].points);

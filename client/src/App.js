@@ -5,7 +5,7 @@ import Game from './components/game.js';
 import Start from '../src/components/Start/start';
 
 const resetPoints = () => {
-  Axios.patch('http://localhost:3000/api/points', 
+  Axios.patch('https://alexs-jeopardy.herokuapp.com/api/points', 
 { points: '0'});
 }
 
@@ -16,7 +16,7 @@ function App() {
 
   window.addEventListener("DOMContentLoaded", () =>{
     var qData =  [["0"],["1"],["2"],["3"],["4"],["5"]];
-      Axios.get('http://localhost:3000/api').then(
+      Axios.get('https://alexs-jeopardy.herokuapp.com/api').then(
         (response) =>{
           const data = response.data;
           let i = 0;            

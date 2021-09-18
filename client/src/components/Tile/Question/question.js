@@ -3,14 +3,14 @@ import { Button,Modal } from "react-bootstrap";
 import Axios from "axios";
     
 const updatePoints = async(data) => {
-      await Axios.patch(`http://localhost:3000/api/points/${data.player}`, 
+      await Axios.patch(`https://alexs-jeopardy.herokuapp.com/api/points/${data.player}`, 
     { points: `${data.point}`});
     };
 
 const  getPoints = async(data) => {// call all point data 
           console.log(data.point);
           console.log(data.player);
-          await Axios.get(`http://localhost:3000/api/points/${data.player}`).then(
+          await Axios.get(`https://alexs-jeopardy.herokuapp.com/api/points/${data.player}`).then(
               (response) =>{           
                 updatePoints({point:response.data[0].points + data.point, player:data.player});
               })
