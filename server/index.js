@@ -2,9 +2,11 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import questionRoutes from './routes/questions.js';
+import dotenv  from 'dotenv'
+dotenv.config()
 
 const app = express();
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -15,7 +17,7 @@ app.get('/', (req,res) =>{res.send("Working")});
 app.use('/api', questionRoutes);
 
 
-mongoose.connect( process.env.MONGODB_URI , {
+mongoose.connect(process.env.MONGODB_URI, {
    useNewUrlParser: true, useUnifiedTopology: true
 })
 .then(() => {  
