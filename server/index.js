@@ -1,11 +1,9 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import API_KEY from './secrets.js';
 import questionRoutes from './routes/questions.js';
 
 const app = express();
-const CONNECTION_URL = API_KEY;
 const PORT = process.env.PORT || 3003;
 
 app.use(express.json());
@@ -17,7 +15,7 @@ app.get('/', (req,res) =>{res.send("Working")});
 app.use('/api', questionRoutes);
 
 
-mongoose.connect(process.env.MONGODB_URI || CONNECTION_URL, {
+mongoose.connect( process.env.MONGODB_URI , {
    useNewUrlParser: true, useUnifiedTopology: true
 })
 .then(() => {  
